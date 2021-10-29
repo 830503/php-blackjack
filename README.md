@@ -7,27 +7,27 @@
 - learn about OOP(object oriented programming) in PHP
 - Make a game with OOP in PHP
 - Create the base classes:
-    √ Create a class  `Player` in `Player.php`.
-    √ Add 2 private properties:
+    - √ Create a class  `Player` in `Player.php`.
+    - √ Add 2 private properties:
         - `cards` 
         - `lost` 
-    √ Add methods to this class: 
+    - √ Add methods to this class: 
 	    - `hit`
 	    - `surrender`
 	    - `getScore`
 	    - `hasLost`
         - `constructor`
-    √ Create a class `Blackjack` in `Blackjack.php`
-    √ Add 3 private properties 
+    - √ Create a class `Blackjack` in `Blackjack.php`
+    - √ Add 3 private properties 
         - `player`
         - `dealer` 
         - `deck`
-    √ Add public methods:
+    - √ Add public methods:
         - `getPlayer`
         - `getDealer`
         - `getDeck`
         - `constructor`
-    √  Create `index.php`
+    - √  Create `index.php`
         - Add the Blackjack rules 
         - Add the functions
 
