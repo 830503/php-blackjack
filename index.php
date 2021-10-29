@@ -13,9 +13,8 @@ if(!isset($_SESSION['blackjack']))
 {
     $_SESSION['blackjack'] = new Blackjack();
 }
+
 $blackjack = $_SESSION['blackjack'];
-
-
 $player = $blackjack->getPlayer();
 $dealer = $blackjack->getDealer();
 $deck = $blackjack->getDeck();
@@ -24,16 +23,15 @@ $palyerScore = $player->getScore();
 $dealerScore = $dealer->getScore();
 
 
-
 if(!isset($_POST['button'])){
-    echo "start a new game!";
+    echo "Start the game!";
 }else if($_POST['button'] === 'hit'){
         $player->hit($deck);
         
         if($player->hasLost())
         {
             echo "You loss!";
-       }else if($palyerScore == 21){
+        }else if($palyerScore == 21){
             echo "You nature win!";
         }else if($palyerScore < 21 && $palyerScore < $dealerScore){
             echo "You loss!";
@@ -44,7 +42,7 @@ if(!isset($_POST['button'])){
         }
         
 
-} else if($_POST['button'] === 'stand'){
+    } else if($_POST['button'] === 'stand'){
         $dealer->hit($deck);
 
         if($dealer->hasLost())
@@ -60,19 +58,21 @@ if(!isset($_POST['button'])){
             echo "You loss!";
         }
         
-}else if($_POST['button'] === 'surrender'){
+    }else if($_POST['button'] === 'surrender'){
         $player->hasLost();
         echo "You loss!";
         
-}if($_POST['button'] === 'new'){
+    }else if($_POST['button'] === 'new'){
     session_unset();
-    $blackjack = new Blackjack();
-    $_SESSION['blackjack'] = $blackjack;
+    $_SESSION['blackjack'] = new Blackjack();
+    $blackjack = $_SESSION['blackjack'];
     $player = $blackjack->getPlayer();
     $dealer = $blackjack->getDealer();
     $deck = $blackjack->getDeck();
-    $score = 0;
-}
+    $score = 0;    
+    $palyerScore = $player->getScore();
+    $dealerScore = $dealer->getScore();
+    }
 
 ?>
 
