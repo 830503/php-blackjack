@@ -33,7 +33,7 @@
 
 # Tools and resources
 - Visual Studio Code
-- Googel
+- Google
 - [Classes and Objects](https://www.php.net/manual/en/language.oop5.php)
 - [w3 school](https://www.w3schools.com/php/php_oop_what_is.asp)
 - YouTube [The Net Ninja](https://www.youtube.com/c/TheNetNinja)
