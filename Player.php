@@ -12,7 +12,7 @@ class Player
         array_push($this->cards, $deck->drawCard());
     }
 
-    public function hit()
+    public function hit(Deck $deck)
     {
         if($this->getScore() > 21){
             $this->hasLost();
